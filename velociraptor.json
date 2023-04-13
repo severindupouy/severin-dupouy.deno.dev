@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "fmt": {
+      "desc": "Formats code",
+      "cmd": "deno fmt"
+    },
+    "lint": {
+      "desc": "Lints code",
+      "cmd": "deno lint"
+    },
+    "pre-commit": {
+      "cmd": [
+        "vr fmt",
+        "vr lint"
+      ],
+      "gitHook": "pre-commit"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+---
+layout: layouts/main.njk
+---
+
+<section class="p-10 flex flex-col border-dashed border-2 border-zinc-200">
+    <header class="prose max-w-none mb-5">
+        <h1>{{ title }}</h1>
+    </header>
+    <div class="prose max-w-none">
+        {{ content | safe }}
+    </div>
+</section>

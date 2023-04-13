@@ -1,0 +1,172 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Séverin Dupouy",
+    "label": "Fullstack software engineer",
+    "url": "https://severin-dupouy.deno.dev",
+    "summary": "I’m a fullstack software engineer, working with Typescript. I like frontend, backend & devops !",
+    "location": { "postalCode": "69000", "city": "Lyon", "countryCode": "FR" },
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "severindupouy",
+        "url": "https://github.com/severindupouy"
+      }
+    ]
+  },
+  "work": [],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Human booster",
+      "area": "Software Engineer",
+      "studyType": "RNCP2 (bac+4)",
+      "startDate": "2017",
+      "endDate": "2018"
+    },
+    {
+      "institution": "Paris 7 University",
+      "area": "Sociology",
+      "studyType": "DEA / Master",
+      "startDate": "2001",
+      "endDate": "2006"
+    },
+    {
+      "institution": "Paris 6 University",
+      "area": "Mathematics",
+      "studyType": "Licence",
+      "startDate": "1995",
+      "endDate": "2000"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Frontend",
+      "level": "Senior",
+      "keywords": ["HTML", "CSS", "Typescript"]
+    },
+    {
+      "name": "Backend",
+      "level": "Senior",
+      "keywords": ["Typescript", "NestJS", "ExpressJS", "POO"]
+    },
+    {
+      "name": "DevOps",
+      "level": "Senior",
+      "keywords": ["Docker", "Jenkins", "Kubernetes"]
+    }
+  ],
+  "languages": [
+    { "language": "English", "fluency": "Writing, professional" },
+    { "language": "Spanish", "fluency": "fluent" }
+  ],
+  "interests": [
+    { "name": "Playing violin" },
+    { "name": "Music" },
+    { "name": "Couple dansing" },
+    { "name": "Hiking, biking" }
+  ],
+  "projects": [
+    {
+      "name": "SDS for Google Workspace / Client Side Encryption",
+      "description": "REST API securing DEKs by wrapping",
+      "highlights": [
+        "Agility / SCRUM",
+        "Authentication / authorization / JWT / IDP",
+        "Clean architecture",
+        "Cryptography",
+        "Docker",
+        "From scratch",
+        "Jenkins, Kubernetes",
+        "NodeJS / ExpressJS",
+        "SAAS"
+      ],
+      "keywords": ["api", "backend", "cryptography", "devops", "saas"],
+      "startDate": "2022-05",
+      "endDate": "2023-09",
+      "roles": ["Developer"],
+      "entity": "Stormshield",
+      "type": "backend"
+    },
+    {
+      "name": "SDS KEY BROKER",
+      "description": "REST API storing & ciphering PGP keys in PostgresSQL",
+      "highlights": [
+        "Agility / SCRUM",
+        "Authentication / authorization / JWT / IDP",
+        "Cryptography",
+        "Docker",
+        "From scratch",
+        "Jenkins",
+        "NodeJS / NestJS"
+      ],
+      "keywords": ["api", "backend", "cryptography", "devops"],
+      "startDate": "2021-04",
+      "endDate": "2022-05",
+      "roles": ["Developer"],
+      "entity": "Stormshield",
+      "type": "backend"
+    },
+    {
+      "name": "SDS for Emails",
+      "description": "Overlay into Gmail, allowings to encrypt emails with PGP.",
+      "highlights": [
+        "Agility / SCRUM",
+        "Angular",
+        "Cryptography",
+        "Docker",
+        "From scratch",
+        "Jenkins",
+        "PGP"
+      ],
+      "keywords": ["frontend", "cryptography", "pgp"],
+      "startDate": "2021-01",
+      "endDate": "2021-04",
+      "roles": ["Developer"],
+      "entity": "Stormshield",
+      "type": "frontend"
+    },
+    {
+      "name": "SDMC",
+      "description": "Back office",
+      "highlights": [
+        "Agility / SCRUM",
+        "Angular",
+        "Docker",
+        "Jenkins",
+        "Redesign"
+      ],
+      "keywords": ["frontend", "backoffice"],
+      "startDate": "2020-10",
+      "endDate": "2021-01",
+      "roles": ["Developer"],
+      "entity": "Stormshield",
+      "type": "frontend"
+    },
+    {
+      "name": "Resource Center",
+      "description": "Frontend & backend in AWS ecosystem",
+      "highlights": [
+        "Agility",
+        "Angular",
+        "AWS (Api Gateway, IAM, Lambdas, CodePipeline, DynamoDB, SQS)",
+        "Cloud",
+        "From scratch",
+        "Handling & synchronizing 500.000 documents",
+        "NoSQL",
+        "Queue"
+      ],
+      "keywords": ["frontend", "backend", "cloud", "AWS"],
+      "startDate": "2018-09",
+      "endDate": "2020-01",
+      "roles": ["Developer"],
+      "entity": "Stormshield",
+      "type": "frontend & backend"
+    }
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2017-12-24T15:53:00"
+  }
+}

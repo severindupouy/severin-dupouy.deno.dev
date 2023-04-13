@@ -1,11 +1,15 @@
 {
+  "imports": {
+    "lume/": "https://deno.land/x/lume@v1.18.2/"
+  },
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
+    "lume:up": "deno task lume upgrade",
     "build": "deno task lume",
-    "serve": "deno task lume -s",
-    "upgrade": "deno task lume upgrade"
+    "serve": "deno task lume -s"
   },
-  "imports": {
-    "lume/": "https://deno.land/x/lume@v1.16.2/"
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "npm:preact"
   }
 }

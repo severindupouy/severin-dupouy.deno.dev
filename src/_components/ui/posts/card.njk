@@ -1,0 +1,14 @@
+<div class="px-10 py-5 bg-zinc-50 shadow-inner shadow-zinc-400/20 space-y-5">
+    <header class="prose max-w-none">
+        <div class="flex justify-between">
+            <h2>{{ title }}</h2>
+            <h6>{{ date | date }}</h6>
+        </div>
+    </header>
+    <p class="prose">{{ summary }}</p>
+    <footer class="flex flex-row-reverse gap-5">
+        {% for tag in tags %}
+            {{ comp.ui.chip({text: tag}) | safe }}
+        {% endfor %}
+    </footer>
+</div>
