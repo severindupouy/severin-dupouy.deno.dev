@@ -14,7 +14,7 @@ type: posts-list
     <div class="flex flex-col gap-2">
         {% for post in search.pages("type=post", "date=desc") %}
             <a href="{{ post.url }}">
-                {{ comp.ui.posts.card(post) | safe }}
+                {{ comp.ui.PostListCard(post) | safe }}
             </a>
         {% endfor %}
     </div>
