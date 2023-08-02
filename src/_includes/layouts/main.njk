@@ -15,6 +15,11 @@
       <div class="bg-zinc-100/80">
         {{ comp.layout.navbar() | safe }}
       </div>
+      <div class="bg-zinc-100/80 flex">
+        <div class="border border-slate-500 w-1/2 h-1/2">
+          {{ comp.ui.ParticlesAnimation() | safe }}
+        </div>
+      </div>
       <main class="mx-auto md:my-16 md:w-4/5">
         {{ content | safe  }}
       </main>
