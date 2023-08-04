@@ -11,73 +11,71 @@ tags:
   - tuto
 ---
 
-## Contexte
+## Context
 
-J’ai suivi la documentation de Lume pour mettre en œuvre la configuration
-suivante :
+Following the Lume’s documentation, I have set up this configuration :
 
-- des posts écrits en Markdown
-- un template de post en Nunjucks
-- du style avec TailwindCSS
+- posts content written in Markdown
+- templating with Nunjucks
+- styling with TailwindCSS
 
-## Problème
+## Problem
 
-Les posts ne s’affichent pas comme je veux, on dirait qu’il n’y a pas de CSS.
+Posts doesn’t display as I expected, it looks like there is no css.
 
-J’inspecte l’html rendu dans le navigateur, et je me rend compte que les balises
-html sont bien présentes, et qu’elles correspondent au markdown.
+I inspect the HTML rendered in the browser, and I realize that all is right :
+the html tags are present, and they correspond to the markdown.
 
-|                  md | html                   |
-| ------------------: | :--------------------- |
-|       `# Mon titre` | `<h1>Mon titre</h1>`   |
-| `## Mon sous-titre` | `<h2>Mon titre</h2>`   |
-|     `Un paragraphe` | `<p>Un paragraphe</p>` |
+|                md | html                    |
+| ----------------: | :---------------------- |
+|      `# My title` | `<h1>My title</h1>`     |
+| `## My sub-title` | `<h2>My sub-title</h2>` |
+|     `A paragraph` | `<p>A paragraph</p>`    |
 
-Mais tout s’affiche de la même façon, pas de CSS.
+But… all of it is displayed the same ! No CSS.
 
-## Explications : TailwindCSS Preflight
+## Explanation : the TailwindCSS preflight
 
-Je vous renvoie vers la
-[documentation de TailwindCSS](https://tailwindcss.com/docs/preflight). En gros,
-un _reset_ est appliqué au CSS, et la logique veut que l’on applique
-manuellement des classes pour créer le CSS. Parmi les balises normalisées par le
-_preflight_, les h1, etc.
+The [documentation of TailwindCSS](https://tailwindcss.com/docs/preflight) tells
+that a _reset_ is applied. Among tags normalized by the preflight : h1, etc. The
+TailwindCSS philosophy should be to set manually some classes to create the
+wanted style.
 
-Si on veut agrandir un titre, il faut faire quelque chose comme ça :
+We should do something like this :
 
 ```html
-<h1 class="text-xl">Mon titre</h1>
+<h1 class="text-xl">My title</h1>
 ```
 
 ## Solutions
 
-Il y en a plusieurs.
-
 ### Solution 1 : typography-plugin
 
-Utiliser le plugin [typography](https://tailwindcss.com/docs/typography-plugin)
-de TailwindCSS et appliquer la classe `prose` à tout rendu d’un fichier
-markdown.
+Use the [typography-plugin](https://tailwindcss.com/docs/typography-plugin) of
+TailwindCSS and apply the `prose` class to render any markdown content.
 
 ```html
-<!-- exemple de la documentation Tailwind -->
+<!-- example from Tailwind documentation -->
 <article class="prose">
   {{ markdown }}
 </article>
 
-<!-- exemple appliqué à Lume -->
+<!-- example applied to Lume -->
 <article class="prose">
   {{ content | safe }}
 </article>
 ```
 
-C’est celle que j’ai mis en place.
+This is the solution I implemented.
 
 ### Solution 2
 
-[Configurer TailwindCSS](https://tailwindcss.com/docs/plugins#adding-base-styles)
-pour appliquer un certain style à certaines balises. Je n’ai pas testé, mais ça
-serait intéressant pour éviter d’installer le plugin typography.
+cf.
+[https://tailwindcss.com/docs/plugins#adding-base-styles](https://tailwindcss.com/docs/plugins#adding-base-styles).
+
+We can set the configuration to apply certain specific styles to certain tags. I
+did not try it. It would be interesting in order not to install the
+typography-plugin.
 
 ```js
 const plugin = require("tailwindcss/plugin");
@@ -95,9 +93,9 @@ module.exports = {
 };
 ```
 
-## Épilogue
+## Epilogue
 
-J’ai fait une
+I submitted to Lume’s maintainer a
 <a href="https://lume.land/plugins/tailwindcss/#mix-with-markdown-%3A-%40tailwindcss%2Ftypography-plugin" target="_blank">
 pull-request
-</a> pour mettre à jour la documentation de Lume.
+</a> to add these details to the documentation.
