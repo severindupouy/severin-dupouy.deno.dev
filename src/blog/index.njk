@@ -1,21 +1,14 @@
 ---
-layout: layouts/blog-index.njk
+layout: layouts/main.njk
 navbar_order: 0
 title: Blog
 type: posts-list
 ---
 
-<section>
-    <header class="mb-5 flex items-between">
-        <div class="prose max-w-none">
-            <h1>{{ title }}</h1>
-        </div>
-    </header>
-    <div class="flex flex-col gap-2">
-        {% for post in search.pages("type=post", "date=desc") %}
-            <a href="{{ post.url }}">
-                {{ comp.ui.PostListCard(post) | safe }}
-            </a>
-        {% endfor %}
-    </div>
+<section class="flex flex-col my-1 gap-1 md:gap-2">
+    {% for post in search.pages("type=post", "date=desc") %}
+        <a href="{{ post.url }}">
+            {{ comp.ui.PostListCard(post) | safe }}
+        </a>
+    {% endfor %}
 </section>

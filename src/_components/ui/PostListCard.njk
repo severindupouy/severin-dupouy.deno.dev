@@ -1,16 +1,16 @@
-<div class="px-10 py-5 bg-zinc-50 shadow-inner shadow-zinc-500 flex justify-between">
-    <div>
-        <p class="underline decoration-dotted">{{ date | date }}</p>
-        <header class="prose">
-            <h2>{{ title }}</h2>
-        </header>
-        <main class="prose">{{ summary }}</main>
+<div class="px-10 py-5 bg-zinc-100/80 shadow-inner shadow-zinc-950 flex justify-between">
+  <div>
+    <p class="underline decoration-dotted">{{ date | date }}</p>
+    <header class="prose">
+      <h1>{{ title }}</h1>
+    </header>
+    <main class="prose">{{ summary }}</main>
+  </div>
+  <footer class="w-1/3 mx-3">
+    <div class="flex flex-wrap justify-end gap-2">
+      {% for tag in tags %}
+        {{ comp.ui.Chip({text: tag}) | safe }}
+      {% endfor %}
     </div>
-    <footer class="w-1/3 mx-3">
-        <div class="flex flex-wrap justify-end gap-2">
-            {% for tag in tags %}
-                {{ comp.ui.Chip({text: tag}) | safe }}
-            {% endfor %}
-        </div>
-    </footer>
+  </footer>
 </div>

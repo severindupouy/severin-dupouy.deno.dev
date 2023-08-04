@@ -2,7 +2,8 @@
 layout: layouts/main.njk
 ---
 
-<article class="p-10 flex flex-col bg-zinc-50/90">
+<article class="p-10 flex flex-col bg-zinc-50/90 shadow-inner shadow-zinc-950">
+  <p class="underline decoration-dotted">{{ date | date }}</p>
   <header class="prose max-w-none mb-5">
     <h1>{{ title }}</h1>
   </header>

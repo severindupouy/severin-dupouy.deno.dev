@@ -1,10 +1,11 @@
 ---
-title: Configure Lume + TailwindCSS + Markdown
-summary: How to configure Lume & TailwindCSS to work with Markdown ? The official Lume documentation was missing some tips.
+title: "[Lume] How to configure TailwindCSS to work with Markdown ?"
+summary: One of the main and interesting features of Lume is to allow content to be written in Markdown. However, the documentation was missing some tips about using markdown with TailwindCSS.
 date: 2023-07-23
 tags:
   - howto
   - lume
+  - markdown
   - tailwindcss
   - tools
   - tuto
@@ -48,7 +49,7 @@ Si on veut agrandir un titre, il faut faire quelque chose comme ça :
 <h1 class="text-xl">Mon titre</h1>
 ```
 
-## Solution
+## Solutions
 
 Il y en a plusieurs.
 
@@ -75,7 +76,8 @@ C’est celle que j’ai mis en place.
 ### Solution 2
 
 [Configurer TailwindCSS](https://tailwindcss.com/docs/plugins#adding-base-styles)
-pour appliquer un certain style à certaines balises.
+pour appliquer un certain style à certaines balises. Je n’ai pas testé, mais ça
+serait intéressant pour éviter d’installer le plugin typography.
 
 ```js
 const plugin = require("tailwindcss/plugin");
