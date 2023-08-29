@@ -1,6 +1,6 @@
-metas:
-  title: =title
-  site: Séverin Dupouy personal website
-  linkedin: sdupouy
-  lang: en
-  generator: true
+description: =summary
+generator: true
+lang: =globals.lang
+linkedin: sdupouy
+site: Séverin Dupouy personal website
+title: =title

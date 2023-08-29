@@ -2,13 +2,14 @@
 layout: layouts/main.njk
 navbar_order: 0
 title: Blog
+summary: List of blog’s posts
 type: posts-list
 ---
 
 <section class="flex flex-col my-1 gap-1 md:gap-2">
-    {% for post in search.pages("type=post", "date=desc") %}
-        <a href="{{ post.url }}">
-            {{ comp.ui.PostListCard(post) | safe }}
-        </a>
-    {% endfor %}
+  {% for post in search.pages("type=post", "date=desc") %}
+    <a href="{{ post.url }}" aria-label="Link to {{ post.url }}">
+      {{ comp.ui.PostListCard(post) | safe }}
+    </a>
+  {% endfor %}
 </section>

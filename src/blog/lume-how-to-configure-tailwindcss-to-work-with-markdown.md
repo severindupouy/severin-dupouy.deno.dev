@@ -96,6 +96,7 @@ module.exports = {
 ## Epilogue
 
 I submitted to Lume’s maintainer a
-<a href="https://lume.land/plugins/tailwindcss/#mix-with-markdown-%3A-%40tailwindcss%2Ftypography-plugin" target="_blank">
+<a href="https://lume.land/plugins/tailwindcss/#mix-with-markdown-%3A-%40tailwindcss%2Ftypography-plugin" 
+aria-label="Open new tab & reach lume.land/plugins/tailwindcss/#mix-with-markdown-%3A-%40tailwindcss%2Ftypography-plugin" target="_blank">
 pull-request
 </a> to add these details to the documentation.

@@ -9,7 +9,9 @@ const server = new Server({
   root: `${Deno.cwd()}/_site`,
 });
 
-server.use(expires()).use(cache_busting());
+server
+  .use(expires())
+  .use(cache_busting());
 
 server.start();
 
