@@ -1,6 +1,6 @@
-<header>
-  <nav class="flex items-center  p-5 border-b border-slate-500">
-    <div class="flex-1 ml-8 md:ml-16">
+<header class="shadowed">
+  <nav class="flex justify-between p-5">
+    <div class="ml-8 md:ml-16">
       <a href="/" aria-label="Go back Home" class="hover:opacity-50">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -18,10 +18,10 @@
         </svg>
       </a>
     </div>
-    <ul class="sm:flex-1 flex flex-col sm:flex-row justify-evenly space-y-2 sm:space-y-0">
+    <ul class="items-center flex flex-col sm:flex-row">
       {% for page in search.pages("type=posts-list|page", "navbar_order") %}
-        <li>
-          <a class="hover:underline hover:decoration-4 hover:decoration-solid" href="{{ page.url }}" aria-label="Navigate to {{ page.url }}">
+        <li class="mx-0 sm:mx-5 my-1 sm:my-0">
+          <a class="decorate-links" href="{{ page.url }}" aria-label="Navigate to {{ page.url }}">
             {{ page.title }}
           </a>
         </li>

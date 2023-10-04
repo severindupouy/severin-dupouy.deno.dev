@@ -2,12 +2,17 @@
 layout: layouts/main.njk
 ---
 
-<article class="p-10 flex flex-col bg-zinc-50/90 shadow-inner shadow-zinc-950">
-  <p class="underline decoration-dotted">{{ date | date }}</p>
-  <header class="prose max-w-none mb-5">
+<article class="p-10 flex flex-col bg-light shadowed">
+  <div class="prose max-w-none">
     <h1>{{ title }}</h1>
-  </header>
-  <main class="prose max-w-none">
+  </div>
+  <div class="my-3 py-1 border-t border-zinc-400">
+    {{ comp.ui.PostMetadata({pubDate: date, wordsCount: readingInfo.words, estimatedReadingTime: readingInfo.minutes, tags: tags}) | safe }}
+  </div>
+  <main class="my-5 prose max-w-none prose-a:decorate-links">
     {{ content | safe }}
   </main>
+  <footer class="border-t border-zinc-400 mt-5 pt-2">
+    {{ comp.ui.PostMetadata({pubDate: date, wordsCount: readingInfo.words, estimatedReadingTime: readingInfo.minutes, tags: tags}) | safe }}
+  </footer>
 </article>

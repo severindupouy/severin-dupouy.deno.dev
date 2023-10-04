@@ -1,0 +1,20 @@
+{
+  "draft": true,
+  "navbar_order": 1,
+  "title": "Portfolio",
+  "summary": "Portfolio",
+  "items": [
+    {
+      "title": "Le chant des pistes",
+      "summary": "Conseil et fabrication d’une site vitrine",
+      "url": "https://le-chant-des-pistes.frama.io/astro-website",
+      "details": "Accompagnement d’une compagnie de théâtre dans la mise en place d’un site vitrine et de ses outils de communication. Atelier de prise en main de gitlab Pages."
+    },
+    {
+      "title": "Myrrhe Éditions",
+      "summary": "Conseil",
+      "url": "https://myrrhe-editions.com",
+      "details": "Conseil pour l’ingénierie de contenus immersifs avec QRcodes et audios."
+    }
+  ]
+}

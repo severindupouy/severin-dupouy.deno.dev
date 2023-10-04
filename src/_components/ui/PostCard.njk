@@ -1,0 +1,13 @@
+<div class="px-10 py-5 bg-light shadowed flex flex-col justify-between">
+  <header class="flex flex-col">
+    <div class="border-b border-zinc-400 mb-3 pb-1">
+      {{ comp.ui.PostMetadata({pubDate: date, wordsCount: readingInfo.words, estimatedReadingTime: readingInfo.minutes}) | safe }}
+    </div>
+    <div class="prose max-w-none">
+      <h3>{{ title }}</h3>
+    </div>
+  </header>
+  <main class="prose max-w-none">
+    {{ summary }}
+  </main>
+</div>

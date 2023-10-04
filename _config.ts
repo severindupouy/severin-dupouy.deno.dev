@@ -1,15 +1,17 @@
+import lume from "lume/mod.ts";
 import codeHighlight from "lume/plugins/code_highlight.ts";
 import date from "lume/plugins/date.ts";
 import esbuild from "lume/plugins/esbuild.ts";
+import favicon from "lume/plugins/favicon.ts";
 import feed from "lume/plugins/feed.ts";
 import filterPages from "lume/plugins/filter_pages.ts";
 import inline from "lume/plugins/inline.ts";
 import jsx from "lume/plugins/jsx_preact.ts";
 import lightningCss from "lume/plugins/lightningcss.ts";
-import lume from "lume/mod.ts";
 import metas from "lume/plugins/metas.ts";
 import minifyHTML from "lume/plugins/minify_html.ts";
 import postcss from "lume/plugins/postcss.ts";
+import readInfo from "lume/plugins/reading_info.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import sourceMaps from "lume/plugins/source_maps.ts";
@@ -27,7 +29,9 @@ const site = lume(
 
 site
   .copy("static")
+  .use(favicon())
   .use(filterPages({ fn: (page) => !page.data.draft }))
+  .use(readInfo())
   .use(jsx())
   .use(date())
   .use(codeHighlight())
@@ -36,13 +40,6 @@ site
     options: {
       darkMode: "class",
       plugins: [typography],
-      theme: {
-        fontFamily: {
-          "sans": ["Inter var", "system-ui"],
-          "serif": ["tex gyre adventor", "Georgia"],
-          "mono": ["ui-monospace", "SFMono-Regular"],
-        },
-      },
     },
   }))
   .use(postcss())

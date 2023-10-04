@@ -7,9 +7,13 @@ type: posts-list
 ---
 
 <section class="flex flex-col my-1 gap-1 md:gap-2">
-  {% for post in search.pages("type=post", "date=desc") %}
-    <a href="{{ post.url }}" aria-label="Link to {{ post.url }}">
-      {{ comp.ui.PostListCard(post) | safe }}
-    </a>
-  {% endfor %}
+  <ul role="list" class="space-y-2">
+    {% for post in search.pages("type=post", "date=desc") %}
+      <li>
+        <a href="{{ post.url }}" aria-label="Link to {{ post.url }}">
+          {{ comp.ui.PostCard(post) | safe }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
 </section>

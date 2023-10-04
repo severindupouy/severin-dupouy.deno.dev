@@ -1,11 +1,13 @@
 ---
 draft: true
-title: Exploring LUME
-summary: Oué j’ai découvert Lume, trop cool !
+title: Sample post
+summary: This is the description
 date: 2021-01-01
 tags:
-    - tools
+    - sample
 ---
+
+# {title}
 
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 > incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis

@@ -1,24 +1,23 @@
 <!doctype html>
-<html lang="{{ globals.lang }}">
+<html lang="{{ globals.lang }}" class="global-background">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="alternate" type="application/rss+xml" href="{{"/rss/feed.rss" | url(true)}}" title="RSS feed">
     <link rel="alternate" type="application/feed+json" href="{{"/rss/feed.json" | url(true)}}" title="JSON RSS feed">
-    <link rel="icon" href="/static/favicon.svg" sizes="any" type="image/svg+xml">
     <link rel="stylesheet" href="/styles/hybrid.min.css">
     <link rel="stylesheet" href="/styles/base.css">
     <title>{{ title }} | {{resume.basics.name}}</title>
   </head>
   <body class="{{ globals.themeMode }}">
     <div class="flex flex-col justify-between h-screen">
-      <div class="bg-zinc-100/80">
+      <div class="bg-light">
         {{ comp.layout.navbar() | safe }}
       </div>
-      <main class="mx-auto md:my-16 md:w-4/5">
+      <main class="mx-auto w-[50rem] md:my-16">
         {{ content | safe  }}
       </main>
-      <div class="bg-zinc-100">
+      <div class="bg-light">
         {{ comp.layout.footer() | safe }}
       </div>
     </div>
