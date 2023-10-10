@@ -21,7 +21,7 @@
     <ul class="items-center flex flex-col sm:flex-row">
       {% for page in search.pages("type=posts-list|page", "navbar_order") %}
         <li class="mx-0 sm:mx-5 my-1 sm:my-0">
-          <a class="decorate-links" href="{{ page.url }}" aria-label="Navigate to {{ page.url }}">
+          <a class="decorate-links font-sans" href="{{ page.url }}" aria-label="Navigate to {{ page.url }}">
             {{ page.title }}
           </a>
         </li>

@@ -9,7 +9,7 @@ layout: layouts/main.njk
   <div class="my-3 py-1 border-t border-zinc-400">
     {{ comp.ui.PostMetadata({pubDate: date, wordsCount: readingInfo.words, estimatedReadingTime: readingInfo.minutes, tags: tags}) | safe }}
   </div>
-  <main class="my-5 prose max-w-none prose-a:decorate-links">
+  <main class="my-5 prose max-w-none prose-a:decorate-links prose-p:font-serif prose-ul:font-serif">
     {{ content | safe }}
   </main>
   <footer class="border-t border-zinc-400 mt-5 pt-2">
